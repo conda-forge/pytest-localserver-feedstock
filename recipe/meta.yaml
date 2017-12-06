@@ -1,7 +1,7 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.3.7" %}
+{% set version = "0.4.1" %}
 {% set hash_type = "sha256" %}
-{% set hash = "d828d79232456d0b4eb863e9de2c85699259f436a3185e39d0d5001b8c8521b0" %}
+{% set hash = "a72af60a1ec8f73668a7884c86baf1fbe48394573cb4fa36709887217736c021" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -14,6 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -21,7 +22,6 @@ requirements:
   build:
     - python
     - setuptools
-    - werkzeug >=0.10
   run:
     - python
     - pytest
