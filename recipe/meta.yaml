@@ -1,7 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.5.0" %}
-{% set hash_type = "sha256" %}
-{% set hash = "3a5427909d1dfda10772c1bae4b9803679c0a8f04adb66c338ac607773bfefc2" %}
+{% set version = "0.5.1" %}
+{% set hash = "ef6f04193dc0f7e8df5b27b3a8834318fa12eaf025436d2a99afff1b73cde761" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -11,20 +10,20 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ ext }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ ext }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
-    - python
+  host:
+    - python 2.7|>=3.3
     - setuptools
+    - pip
   run:
-    - python
-    - pytest
+    - python 2.7|>=3.3
     - werkzeug >=0.10
 
 test:
@@ -36,8 +35,9 @@ test:
     - py.test --help
 
 about:
-  home: https://bitbucket.org/pytest-dev/pytest-localserver
+  home: https://github.com/pytest-dev/pytest-localserver
   license: MIT
+  license_file: LICENSE
   summary: pytest-localserver is a plugin for the pytest testing framework which enables you to test server connections locally.
 
 extra:
