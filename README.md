@@ -1,7 +1,7 @@
 About pytest-localserver
 ========================
 
-Home: https://bitbucket.org/pytest-dev/pytest-localserver
+Home: https://github.com/pytest-dev/pytest-localserver
 
 Package license: MIT
 
