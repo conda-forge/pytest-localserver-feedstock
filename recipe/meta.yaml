@@ -19,11 +19,12 @@ build:
 
 requirements:
   host:
-    - python 2.7|>=3.3
+    - python >=3.5
     - setuptools
     - pip
   run:
-    - python 2.7|>=3.3
+    - aiosmtpd
+    - python >=3.5    
     - werkzeug >=0.10
 
 test:
@@ -32,7 +33,7 @@ test:
   imports:
     - pytest_localserver
   commands:
-    - py.test --help
+    - pytest --help
 
 about:
   home: https://github.com/pytest-dev/pytest-localserver
