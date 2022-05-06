@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.5.1.post0" %}
-{% set hash = "5ec7f8e6534cf03887af2cb59e577f169ac0e8b2fd2c3e3409280035f386d407" %}
+{% set version = "0.6.0" %}
+{% set hash = "ddc479aba96a7da0e7a1cc7d3a303e50582d6d505803e8f67b827218f9fe0f65" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -19,11 +19,12 @@ build:
 
 requirements:
   host:
-    - python 2.7|>=3.3
+    - python >=3.5
     - setuptools
     - pip
   run:
-    - python 2.7|>=3.3
+    - aiosmtpd
+    - python >=3.5    
     - werkzeug >=0.10
 
 test:
@@ -32,7 +33,7 @@ test:
   imports:
     - pytest_localserver
   commands:
-    - py.test --help
+    - pytest --help
 
 about:
   home: https://github.com/pytest-dev/pytest-localserver
