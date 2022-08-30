@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.6.0" %}
-{% set hash = "ddc479aba96a7da0e7a1cc7d3a303e50582d6d505803e8f67b827218f9fe0f65" %}
+{% set version = "0.7.0" %}
+{% set hash = "f19b490c7ca1ed05bfe4bc6b490811805a61e7271f0424d3c0fa4d43893a5dcd" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - aiosmtpd
-    - python >=3.5    
+    - python >=3.5
     - werkzeug >=0.10
 
 test:
