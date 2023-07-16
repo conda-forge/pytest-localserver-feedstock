@@ -1,11 +1,11 @@
-About pytest-localserver
-========================
+About pytest-localserver-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-localserver-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pytest-dev/pytest-localserver
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-localserver-feedstock/blob/main/LICENSE.txt)
 
 Summary: pytest-localserver is a plugin for the pytest testing framework which enables you to test server connections locally.
 
