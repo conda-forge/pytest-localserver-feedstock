@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.8.0" %}
-{% set hash = "5d90ce7d085d741e759fa854dbd2e7c5b557321d695179894eb40e210ea2ff30" %}
+{% set version = "0.8.1" %}
+{% set hash = "66569c34fef31a5750b16effd1cd1288a7a90b59155d005e7f916accd3dee4f1" %}
 {% set ext = "tar.gz" %}
 
 package:
