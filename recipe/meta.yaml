@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.8.1" %}
-{% set hash = "66569c34fef31a5750b16effd1cd1288a7a90b59155d005e7f916accd3dee4f1" %}
+{% set version = "0.9.0.post0" %}
+{% set hash = "8033a36fb382d2bc4850f9acfe2c3fb5654cd5f0d163af6daf47f290db7d5ff0" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ ext }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.{{ ext }}
   sha256: {{ hash }}
 
 build:
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - setuptools
     - pip
   run:
     - aiosmtpd
-    - python >=3.5
+    - python >=3.6
     - werkzeug >=0.10
 
 test:
