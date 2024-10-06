@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - setuptools
     - pip
   run:
     - aiosmtpd
-    - python >=3.5
+    - python >=3.6
     - werkzeug >=0.10
 
 test:
