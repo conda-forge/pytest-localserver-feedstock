@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.9.0.post0" %}
-{% set hash = "8033a36fb382d2bc4850f9acfe2c3fb5654cd5f0d163af6daf47f290db7d5ff0" %}
+{% set version = "0.10.0" %}
+{% set hash = "2607197f390912ab25525d129ac43c3c875049257368b3fe09b5cd03dcc526af" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
