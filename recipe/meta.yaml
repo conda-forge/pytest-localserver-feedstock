@@ -1,6 +1,6 @@
 {% set name = "pytest-localserver" %}
-{% set version = "0.10.0" %}
-{% set hash = "2607197f390912ab25525d129ac43c3c875049257368b3fe09b5cd03dcc526af" %}
+{% set version = "0.10.0.post0" %}
+{% set hash = "06c21a66609d862b42bd9cb816334820e696ea8f77cacddfe159127d48649851" %}
 {% set ext = "tar.gz" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ ext }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.{{ ext }}
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.{{ ext }}
   sha256: {{ hash }}
 
 build:
